@@ -36,6 +36,16 @@ namespace doanwf.DAO
                 {
                     return true;
                 }
+                if (cm.Connection.State == ConnectionState.Open)
+                {
+                    cm.Connection.Close();
+                }
+                conn.Open();
+                int n = cm.ExecuteNonQuery();
+                if (n > 0)
+                {
+                    return true;
+                }
             }
             catch (Exception ex)
             {
