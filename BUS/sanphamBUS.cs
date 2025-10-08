@@ -15,7 +15,7 @@ namespace doanwf.BUS
         {
             return sp.GetMaLoai();
         }
-
+//
         public DataTable getMauSac()
         {
             return sp.GetMauSac();
